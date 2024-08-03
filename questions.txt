@@ -1,0 +1,671 @@
+What is the capital of France?
+Berlin
+Madrid
+Paris
+Rome
+3
+
+Who wrote 'To Kill a Mockingbird'?
+Harper Lee
+J.K. Rowling
+Ernest Hemingway
+Mark Twain
+1
+
+What is the largest planet in our Solar System?
+Earth
+Mars
+Jupiter
+Saturn
+3
+
+Which element has the chemical symbol 'O'?
+Oxygen
+Gold
+Osmium
+Zinc
+1
+
+What year did the Titanic sink?
+1912
+1905
+1918
+1923
+1
+
+What is the capital of Germany?
+Berlin
+Vienna
+Zurich
+Hamburg
+1
+
+Who discovered penicillin?
+Alexander Fleming
+Marie Curie
+Isaac Newton
+Albert Einstein
+1
+
+Which planet is known as the Red Planet?
+Earth
+Mars
+Jupiter
+Saturn
+2
+
+What is the hardest natural substance on Earth?
+Gold
+Iron
+Diamond
+Platinum
+3
+
+What is the largest mammal in the world?
+Elephant
+Whale Shark
+Blue Whale
+Giraffe
+3
+
+What is the smallest country in the world?
+Monaco
+Vatican City
+Nauru
+San Marino
+2
+
+Who painted the Mona Lisa?
+Vincent van Gogh
+Pablo Picasso
+Leonardo da Vinci
+Claude Monet
+3
+
+What is the longest river in the world?
+Nile
+Amazon
+Yangtze
+Mississippi
+1
+
+What is the capital of Italy?
+Rome
+Paris
+Madrid
+Berlin
+1
+
+Who invented the lightbulb?
+Thomas Edison
+Nikola Tesla
+Alexander Graham Bell
+Guglielmo Marconi
+1
+
+What is the chemical symbol for gold?
+Ag
+Au
+Pb
+Fe
+2
+
+What is the capital of Japan?
+Seoul
+Beijing
+Tokyo
+Kyoto
+3
+
+What is the main ingredient in guacamole?
+Tomato
+Onion
+Avocado
+Pepper
+3
+
+Who wrote '1984'?
+George Orwell
+Aldous Huxley
+Ray Bradbury
+J.R.R. Tolkien
+1
+
+What is the smallest bone in the human body?
+Femur
+Stapes
+Ulna
+Tibia
+2
+
+What is the largest desert in the world?
+Sahara
+Gobi
+Kalahari
+Antarctic Desert
+4
+
+What is the capital of Canada?
+Toronto
+Vancouver
+Ottawa
+Montreal
+3
+
+What is the square root of 64?
+6
+7
+8
+9
+3
+
+Who was the first man to walk on the moon?
+Yuri Gagarin
+Buzz Aldrin
+Neil Armstrong
+Michael Collins
+3
+
+What is the speed of light?
+300,000 km/s
+150,000 km/s
+299,792 km/s
+100,000 km/s
+3
+
+What is the chemical formula for water?
+H2O
+CO2
+O2
+H2SO4
+1
+
+Who wrote 'Pride and Prejudice'?
+Jane Austen
+Emily Brontë
+Charles Dickens
+Mark Twain
+1
+
+What is the capital of Australia?
+Sydney
+Melbourne
+Canberra
+Perth
+3
+
+Who developed the theory of relativity?
+Isaac Newton
+Albert Einstein
+Galileo Galilei
+Niels Bohr
+2
+
+What is the largest organ in the human body?
+Heart
+Liver
+Skin
+Brain
+3
+
+What is the currency of Japan?
+Yuan
+Yen
+Won
+Dollar
+2
+
+Who painted the ceiling of the Sistine Chapel?
+Leonardo da Vinci
+Michelangelo
+Raphael
+Donatello
+2
+
+What is the hardest rock?
+Marble
+Granite
+Diamond
+Basalt
+3
+
+Who is known as the father of computers?
+Alan Turing
+Charles Babbage
+John von Neumann
+Bill Gates
+2
+
+What is the chemical symbol for silver?
+Ag
+Au
+Pb
+Fe
+1
+
+What is the capital of Russia?
+Moscow
+Saint Petersburg
+Kazan
+Novosibirsk
+1
+
+What is the smallest planet in the Solar System?
+Mercury
+Venus
+Mars
+Pluto
+1
+
+What is the boiling point of water?
+90°C
+95°C
+100°C
+105°C
+3
+
+Who wrote 'Hamlet'?
+William Shakespeare
+Christopher Marlowe
+John Milton
+Geoffrey Chaucer
+1
+
+What is the currency of the United Kingdom?
+Euro
+Pound Sterling
+Dollar
+Franc
+2
+
+What is the capital of Brazil?
+Rio de Janeiro
+São Paulo
+Brasília
+Salvador
+3
+
+What is the chemical formula for table salt?
+NaCl
+KCl
+CaCl2
+MgCl2
+1
+
+What is the capital of India?
+Mumbai
+New Delhi
+Kolkata
+Chennai
+2
+
+Who wrote 'The Great Gatsby'?
+F. Scott Fitzgerald
+Ernest Hemingway
+John Steinbeck
+William Faulkner
+1
+
+What is the largest continent?
+Africa
+Europe
+Asia
+South America
+3
+
+What is the smallest ocean?
+Atlantic
+Pacific
+Indian
+Arctic
+4
+
+Who invented the telephone?
+Alexander Graham Bell
+Thomas Edison
+Nikola Tesla
+Guglielmo Marconi
+1
+
+What is the capital of China?
+Shanghai
+Beijing
+Hong Kong
+Guangzhou
+2
+
+What is the most abundant gas in the Earth's atmosphere?
+Oxygen
+Carbon Dioxide
+Nitrogen
+Helium
+3
+
+What is the main ingredient in hummus?
+Chickpeas
+Lentils
+Peas
+Beans
+1
+
+What is the chemical symbol for iron?
+Fe
+Ir
+In
+I
+1
+
+Who wrote 'Moby-Dick'?
+Herman Melville
+Nathaniel Hawthorne
+Mark Twain
+Jules Verne
+1
+
+What is the capital of Egypt?
+Cairo
+Alexandria
+Giza
+Luxor
+1
+
+What is the largest bird in the world?
+Eagle
+Penguin
+Ostrich
+Albatross
+3
+
+What is the currency of Switzerland?
+Euro
+Franc
+Pound
+Dollar
+2
+
+What is the chemical formula for carbon dioxide?
+CO
+CO2
+C2O
+C2O2
+2
+
+What is the capital of Greece?
+Athens
+Sparta
+Thessaloniki
+Patras
+1
+
+Who wrote 'War and Peace'?
+Leo Tolstoy
+Fyodor Dostoevsky
+Anton Chekhov
+Ivan Turgenev
+1
+
+What is the most spoken language in the world?
+English
+Spanish
+Mandarin
+Hindi
+3
+
+What is the hardest natural substance on Earth?
+Gold
+Iron
+Diamond
+Platinum
+3
+
+What is the capital of Spain?
+Madrid
+Barcelona
+Seville
+Valencia
+1
+
+Who wrote 'The Catcher in the Rye'?
+J.D. Salinger
+F. Scott Fitzgerald
+Ernest Hemingway
+John Steinbeck
+1
+
+What is the currency of India?
+Dollar
+Rupee
+Yen
+Peso
+2
+
+What is the chemical formula for oxygen gas?
+O
+O2
+O3
+O4
+2
+
+Who wrote 'The Odyssey'?
+Homer
+Virgil
+Sophocles
+Aristophanes
+1
+
+What is the capital of Mexico?
+Mexico City
+Guadalajara
+Monterrey
+Tijuana
+1
+
+What is the currency of Russia?
+Euro
+Dollar
+Ruble
+Pound
+3
+
+What is the smallest bird in the world?
+Sparrow
+Hummingbird
+Finch
+Robin
+2
+
+What is the capital of Turkey?
+Istanbul
+Izmir
+Ankara
+Antalya
+3
+
+Who wrote 'The Divine Comedy'?
+Dante Alighieri
+Geoffrey Chaucer
+John Milton
+William Shakespeare
+1
+
+What is the chemical symbol for potassium?
+P
+Pt
+K
+Po
+3
+
+What is the capital of South Korea?
+Seoul
+Busan
+Incheon
+Daegu
+1
+
+Who wrote 'Don Quixote'?
+Miguel de Cervantes
+Gabriel García Márquez
+Pablo Neruda
+Federico García Lorca
+1
+
+What is the largest fish in the world?
+Great White Shark
+Blue Whale
+Whale Shark
+Dolphin
+3
+
+What is the currency of Canada?
+Dollar
+Pound
+Euro
+Peso
+1
+
+What is the capital of Argentina?
+Buenos Aires
+Córdoba
+Rosario
+Mendoza
+1
+
+Who wrote 'Frankenstein'?
+Mary Shelley
+Bram Stoker
+H.G. Wells
+Jules Verne
+1
+
+What is the capital of Portugal?
+Porto
+Lisbon
+Faro
+Braga
+2
+
+Who wrote 'Jane Eyre'?
+Charlotte Brontë
+Emily Brontë
+Jane Austen
+Mary Shelley
+1
+
+What is the smallest continent?
+Europe
+Asia
+Australia
+Antarctica
+3
+
+What is the currency of Australia?
+Dollar
+Pound
+Euro
+Yen
+1
+
+What is the capital of Saudi Arabia?
+Mecca
+Jeddah
+Riyadh
+Medina
+3
+
+What is the chemical formula for methane?
+CH4
+C2H4
+C3H8
+C4H10
+1
+
+Who wrote 'One Hundred Years of Solitude'?
+Gabriel García Márquez
+Mario Vargas Llosa
+Pablo Neruda
+Isabel Allende
+1
+
+What is the currency of South Korea?
+Dollar
+Yen
+Won
+Ruble
+3
+
+Who painted 'Starry Night'?
+Vincent van Gogh
+Pablo Picasso
+Claude Monet
+Leonardo da Vinci
+1
+
+What is the capital of Indonesia?
+Jakarta
+Bali
+Surabaya
+Bandung
+1
+
+What is the chemical symbol for sodium?
+Na
+S
+Si
+Sn
+1
+
+Who wrote 'The Iliad'?
+Homer
+Virgil
+Sophocles
+Euripides
+1
+
+What is the largest island in the world?
+Greenland
+Madagascar
+Borneo
+New Guinea
+1
+
+What is the currency of Brazil?
+Dollar
+Peso
+Real
+Franc
+3
+
+What is the capital of Norway?
+Oslo
+Bergen
+Trondheim
+Stavanger
+1
+
+What is the chemical formula for ammonia?
+NH3
+NH4
+N2H4
+NH
+1
+
+Who wrote 'Les Misérables'?
+Victor Hugo
+Alexandre Dumas
+Gustave Flaubert
+Emile Zola
+1
+
+What is the capital of Chile?
+Santiago
+Valparaíso
+Concepción
+Antofagasta
+1
+
+What is the chemical symbol for lead?
+Pb
+Pt
+P
+L
+1
