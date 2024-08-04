@@ -670,3 +670,10 @@ P
 L
 1
 
+What comes next in the series: 2, 5, 10, 17, 26...?
+30
+32
+41
+37
+4
+
