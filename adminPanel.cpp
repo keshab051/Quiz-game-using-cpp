@@ -2,7 +2,6 @@
 #include <fstream>
 #include <string>
 #include <vector>
-
 using namespace std;
 
 struct Question {
@@ -12,7 +11,7 @@ struct Question {
 };
 
 void saveQuestion(const Question& q) {
-    ofstream outFile("questions.bin", ios::binary | ios::app);
+    ofstream outFile("questions.txt", ios::binary | ios::app);
     if (!outFile) {
         cerr << "Error opening file for writing." << endl;
         return;
@@ -45,7 +44,7 @@ bool checkPassword(const string& inputPassword, const string& actualPassword) {
 void updatePassword(string& password) {
     cout << "Enter new password: ";
     cin >> password;
-    ofstream passwordFile("password.bin");
+    ofstream passwordFile("password.txt");
     if (!passwordFile) {
         cerr << "Error opening password file for writing." << endl;
         return;
@@ -56,7 +55,7 @@ void updatePassword(string& password) {
 }
 
 vector<Question> loadQuestions() {
-    ifstream inFile("questions.bin", ios::binary);
+    ifstream inFile("questions.txt", ios::binary);
     vector<Question> questions;
     if (!inFile) {
         cerr << "Error opening file for reading." << endl;
@@ -71,7 +70,7 @@ vector<Question> loadQuestions() {
 }
 
 void saveAllQuestions(const vector<Question>& questions) {
-    ofstream outFile("questions.bin", ios::binary | ios::trunc);
+    ofstream outFile("questions.txt", ios::binary | ios::trunc);
     if (!outFile) {
         cerr << "Error opening file for writing." << endl;
         return;
@@ -109,9 +108,9 @@ void deleteQuestion() {
 
 int main() {
     string password;
-    ifstream passwordFile("password.bin");
+    ifstream passwordFile("password.txt");
     if (!passwordFile) {
-        ofstream outFile("password.bin");
+        ofstream outFile("password.txt");
         password = "admin";  // Default password
         outFile << password;
         outFile.close();
@@ -130,7 +129,7 @@ int main() {
     }
 
     int choice;
-    do {
+    do { 
         cout << "\nWelcome Back, Chief!\n";
         cout << "1. Add a new question\n";
         cout << "2. Delete a question\n";
