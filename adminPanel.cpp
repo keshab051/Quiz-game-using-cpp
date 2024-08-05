@@ -2,49 +2,48 @@
 #include <fstream>
 #include <string>
 #include <vector>
-using namespace std;
 
 class Question
 {
 public:
-    string questionText;
-    string options[4];
+    std::string questionText;
+    std::string options[4];
     int correctOption;
 
     void inputQuestion()
     {
-        cin.ignore(); // Ignore any leftover newline characters in the input buffer
-        cout << "Enter the question: ";
-        getline(cin, questionText);
+        std::cin.ignore(); // Ignore any leftover newline characters in the input buffer
+        std::cout << "Enter the question: ";
+        std::getline(std::cin, questionText);
 
         for (int i = 0; i < 4; ++i)
         {
-            cout << "Enter option " << i + 1 << ": ";
-            getline(cin, options[i]);
+            std::cout << "Enter option " << i + 1 << ": ";
+            std::getline(std::cin, options[i]);
         }
 
-        cout << "Enter the correct option number (1-4): ";
-        cin >> correctOption;
-        cin.ignore(); // Clear the newline character left by cin
+        std::cout << "Enter the correct option number (1-4): ";
+        std::cin >> correctOption;
+        std::cin.ignore(); // Clear the newline character left by std::cin
     }
 
-    void saveQuestion(ofstream &outFile) const
+    void saveQuestion(std::ofstream &outFile) const
     {
-        outFile << questionText << endl;
+        outFile << questionText << std::endl;
         for (const auto &option : options)
         {
-            outFile << option << endl;
+            outFile << option << std::endl;
         }
-        outFile << correctOption << endl;
-        outFile << endl; // Add an empty line after each question
+        outFile << correctOption << std::endl;
+        outFile << std::endl; // Add an empty line after each question
     }
 
-    void loadQuestion(ifstream &inFile)
+    void loadQuestion(std::ifstream &inFile)
     {
-        getline(inFile, questionText);
+        std::getline(inFile, questionText);
         for (auto &option : options)
         {
-            getline(inFile, option);
+            std::getline(inFile, option);
         }
         inFile >> correctOption;
         inFile.ignore(); // Ignore the newline character after the integer
@@ -55,35 +54,35 @@ public:
 class QuizManager
 {
 private:
-    string password;
-    vector<Question> questions;
+    std::string password;
+    std::vector<Question> questions;
 
-    bool checkPassword(const string &inputPassword) const
+    bool checkPassword(const std::string &inputPassword) const
     {
         return inputPassword == password;
     }
 
     void updatePassword()
     {
-        cout << "Enter new password: ";
-        cin >> password;
-        ofstream passwordFile("password.txt");
+        std::cout << "Enter new password: ";
+        std::cin >> password;
+        std::ofstream passwordFile("password.txt");
         if (!passwordFile)
         {
-            cerr << "Error opening password file for writing." << endl;
+            std::cerr << "Error opening password file for writing." << std::endl;
             return;
         }
         passwordFile << password;
         passwordFile.close();
-        cout << "Password updated successfully." << endl;
+        std::cout << "Password updated successfully." << std::endl;
     }
 
     void saveAllQuestions() const
     {
-        ofstream outFile("questions.txt");
+        std::ofstream outFile("questions.txt");
         if (!outFile)
         {
-            cerr << "Error opening file for writing." << endl;
+            std::cerr << "Error opening file for writing." << std::endl;
             return;
         }
         for (const auto &q : questions)
@@ -95,10 +94,10 @@ private:
 
     void loadQuestions()
     {
-        ifstream inFile("questions.txt");
+        std::ifstream inFile("questions.txt");
         if (!inFile)
         {
-            cerr << "Error opening file for reading." << endl;
+            std::cerr << "Error opening file for reading." << std::endl;
             return;
         }
         questions.clear();
@@ -114,17 +113,17 @@ private:
 public:
     QuizManager()
     {
-        ifstream passwordFile("password.txt");
+        std::ifstream passwordFile("password.txt");
         if (!passwordFile)
         {
-            ofstream outFile("password.txt");
+            std::ofstream outFile("password.txt");
             password = "admin"; // Default password
             outFile << password;
             outFile.close();
         }
         else
         {
-            getline(passwordFile, password);
+            std::getline(passwordFile, password);
             passwordFile.close();
         }
         loadQuestions();
@@ -142,52 +141,52 @@ public:
     {
         if (questions.empty())
         {
-            cout << "No questions available to delete." << endl;
+            std::cout << "No questions available to delete." << std::endl;
             return;
         }
 
         for (size_t i = 0; i < questions.size(); ++i)
         {
-            cout << i + 1 << ". " << questions[i].questionText << endl;
+            std::cout << i + 1 << ". " << questions[i].questionText << std::endl;
         }
 
         int questionNumber;
-        cout << "Enter the number of the question to delete: ";
-        cin >> questionNumber;
+        std::cout << "Enter the number of the question to delete: ";
+        std::cin >> questionNumber;
 
         if (questionNumber < 1 || questionNumber > questions.size())
         {
-            cout << "Invalid question number." << endl;
+            std::cout << "Invalid question number." << std::endl;
             return;
         }
 
         questions.erase(questions.begin() + (questionNumber - 1));
         saveAllQuestions();
-        cout << "Question deleted successfully." << endl;
+        std::cout << "Question deleted successfully." << std::endl;
     }
 
     void adminPanel()
     {
-        string inputPassword;
-        cout << "Enter password to access admin panel: ";
-        cin >> inputPassword;
+        std::string inputPassword;
+        std::cout << "Enter password to access admin panel: ";
+        std::cin >> inputPassword;
 
         if (!checkPassword(inputPassword))
         {
-            cout << "Incorrect password. Access denied." << endl;
+            std::cout << "Incorrect password. Access denied." << std::endl;
             return;
         }
 
         int choice;
         do
         {
-            cout << "\nWelcome Back, Chief!\n";
-            cout << "1. Add a new question\n";
-            cout << "2. Delete a question\n";
-            cout << "3. Update password\n";
-            cout << "4. Exit\n";
-            cout << "Enter your choice: ";
-            cin >> choice;
+            std::cout << "\nWelcome Back, Chief!\n";
+            std::cout << "1. Add a new question\n";
+            std::cout << "2. Delete a question\n";
+            std::cout << "3. Update password\n";
+            std::cout << "4. Exit\n";
+            std::cout << "Enter your choice: ";
+            std::cin >> choice;
 
             switch (choice)
             {
@@ -201,10 +200,10 @@ public:
                 updatePassword();
                 break;
             case 4:
-                cout << "Exiting..." << endl;
+                std::cout << "Exiting..." << std::endl;
                 break;
             default:
-                cout << "Invalid choice. Please try again." << endl;
+                std::cout << "Invalid choice. Please try again." << std::endl;
                 break;
             }
         } while (choice != 4);

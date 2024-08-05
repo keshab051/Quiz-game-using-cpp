@@ -10,21 +10,18 @@
 #include <thread>
 #include <future>
 
-using namespace std;
-
-// Class to hold each question and its options
 class Question
 {
 public:
-    Question(const string &questionText, const vector<string> &options, int correctOption)
+    Question(const std::string &questionText, const std::vector<std::string> &options, int correctOption)
         : questionText(questionText), options(options), correctOption(correctOption) {}
 
     void display(int questionNumber) const
     {
-        cout << "Question " << questionNumber + 1 << ": " << questionText << endl;
+        std::cout << "Question " << questionNumber + 1 << ": " << questionText << std::endl;
         for (size_t i = 0; i < options.size(); ++i)
         {
-            cout << i + 1 << ". " << options[i] << endl;
+            std::cout << i + 1 << ". " << options[i] << std::endl;
         }
     }
 
@@ -33,12 +30,12 @@ public:
         return answer == correctOption;
     }
 
-    const string &getCorrectOption() const
+    const std::string &getCorrectOption() const
     {
         return options[correctOption];
     }
 
-    void addOption(const string &option)
+    void addOption(const std::string &option)
     {
         options.push_back(option);
     }
@@ -49,8 +46,8 @@ public:
     }
 
 private:
-    string questionText;
-    vector<string> options;
+    std::string questionText;
+    std::vector<std::string> options;
     int correctOption; // Index of the correct option
 };
 
@@ -58,14 +55,14 @@ private:
 class PlayerScore
 {
 public:
-    PlayerScore(const string &name, int score)
+    PlayerScore(const std::string &name, int score)
         : name(name), score(score) {}
 
-    const string &getName() const { return name; }
+    const std::string &getName() const { return name; }
     int getScore() const { return score; }
 
 private:
-    string name;
+    std::string name;
     int score;
 };
 
@@ -73,19 +70,19 @@ private:
 class QuizGame
 {
 public:
-    QuizGame(const string &questionsFile, const string &leaderboardFile)
+    QuizGame(const std::string &questionsFile, const std::string &leaderboardFile)
         : questionsFile(questionsFile), leaderboardFile(leaderboardFile) {}
 
     void loadQuestions(int numberOfQuestions)
     {
-        vector<int> questionIndices = generateRandomNumbers(100, numberOfQuestions);
-        ifstream file(questionsFile);
-        string line;
+        std::vector<int> questionIndices = generateRandomNumbers(100, numberOfQuestions);
+        std::ifstream file(questionsFile);
+        std::string line;
         int questionIndex = -1;
         int currentQuestion = 0;
         int selectedQuestionIndex = 0;
 
-        while (getline(file, line))
+        while (std::getline(file, line))
         {
             if (line.empty())
                 continue; // Skip empty lines
@@ -107,7 +104,7 @@ public:
                 }
                 else
                 {
-                    questions.back().setCorrectOption(stoi(line) - 1); // Adjust for 0-based index
+                    questions.back().setCorrectOption(std::stoi(line) - 1); // Adjust for 0-based index
                     selectedQuestionIndex++;
                 }
             }
@@ -117,16 +114,15 @@ public:
 
         if (questions.size() < numberOfQuestions)
         {
-            throw runtime_error("Not enough questions loaded. Please check the file.");
+            throw std::runtime_error("Not enough questions loaded. Please check the file.");
         }
     }
 
     void startGame()
     {
-        cout << "Enter your full name: ";
-        string playerName;
-        cin.ignore(); // To clear the buffer
-        getline(cin, playerName);
+        std::cout << "Enter your full name: ";
+        std::string playerName;
+        std::getline(std::cin, playerName);
 
         int score = 0;
         const int timeLimitSeconds = 10; // Time limit for each question in seconds
@@ -137,54 +133,54 @@ public:
             int userAnswer = getAnswerWithTimer(timeLimitSeconds);
             if (questions[i].isCorrect(userAnswer))
             {
-                cout << "Correct!" << endl;
+                std::cout << "Correct!" << std::endl;
                 score++;
             }
             else if (userAnswer == -1)
             {
-                cout << "No answer provided in time." << endl;
+                std::cout << "No answer provided in time." << std::endl;
             }
             else
             {
-                cout << "Wrong! The correct answer is: " << questions[i].getCorrectOption() << endl;
+                std::cout << "Wrong! The correct answer is: " << questions[i].getCorrectOption() << std::endl;
             }
-            cout << endl;
+            std::cout << std::endl;
         }
 
-        cout << "Quiz finished!" << endl;
-        cout << "Your final score is: " << score << " out of " << questions.size() << endl;
+        std::cout << "Quiz finished!" << std::endl;
+        std::cout << "Your final score is: " << score << " out of " << questions.size() << std::endl;
 
         saveScoreToLeaderboard(playerName, score);
         displayLeaderboard();
     }
 
 private:
-    string questionsFile;
-    string leaderboardFile;
-    vector<Question> questions;
+    std::string questionsFile;
+    std::string leaderboardFile;
+    std::vector<Question> questions;
 
     static int getAnswerWithTimer(int timeLimitSeconds)
     {
         int answer = -1;
         auto future = std::async(std::launch::async, [&answer]()
-                                 { cin >> answer; });
+                                 { std::cin >> answer; });
 
         if (future.wait_for(std::chrono::seconds(timeLimitSeconds)) == std::future_status::timeout)
         {
-            cout << "Time's up!" << endl;
+            std::cout << "Time's up!" << std::endl;
             return -1; // Indicate that no answer was provided in time
         }
 
         return answer - 1; // Adjusting for 0-based index
     }
 
-    static vector<int> generateRandomNumbers(int range, int count)
+    static std::vector<int> generateRandomNumbers(int range, int count)
     {
-        vector<int> randomNumbers;
-        unordered_set<int> uniqueNumbers;
-        random_device rd;
-        mt19937 gen(rd());
-        uniform_int_distribution<> dis(0, range - 1);
+        std::vector<int> randomNumbers;
+        std::unordered_set<int> uniqueNumbers;
+        std::random_device rd;
+        std::mt19937 gen(rd());
+        std::uniform_int_distribution<> dis(0, range - 1);
 
         while (uniqueNumbers.size() < count)
         {
@@ -196,40 +192,40 @@ private:
             }
         }
 
-        sort(randomNumbers.begin(), randomNumbers.end());
+        std::sort(randomNumbers.begin(), randomNumbers.end());
         return randomNumbers;
     }
 
-    void saveScoreToLeaderboard(const string &playerName, int score)
+    void saveScoreToLeaderboard(const std::string &playerName, int score)
     {
-        ofstream file(leaderboardFile, ios::app);
-        file << playerName << " " << score << endl;
+        std::ofstream file(leaderboardFile, std::ios::app);
+        file << playerName << " " << score << std::endl;
     }
 
     void displayLeaderboard() const
     {
-        ifstream file(leaderboardFile);
-        string line;
-        vector<PlayerScore> scores;
+        std::ifstream file(leaderboardFile);
+        std::string line;
+        std::vector<PlayerScore> scores;
 
-        while (getline(file, line))
+        while (std::getline(file, line))
         {
-            istringstream iss(line);
-            string name;
+            std::istringstream iss(line);
+            std::string name;
             int score;
             iss >> name >> score;
             scores.emplace_back(name, score);
         }
 
-        sort(scores.begin(), scores.end(), [](const PlayerScore &a, const PlayerScore &b)
+        std::sort(scores.begin(), scores.end(), [](const PlayerScore &a, const PlayerScore &b)
              {
                  return b.getScore() < a.getScore(); // Sort in descending order of scores
              });
 
-        cout << "Leaderboard:" << endl;
+        std::cout << "Leaderboard:" << std::endl;
         for (const auto &ps : scores)
         {
-            cout << ps.getName() << ": " << ps.getScore() << endl;
+            std::cout << ps.getName() << ": " << ps.getScore() << std::endl;
         }
     }
 };
@@ -242,9 +238,9 @@ int main()
         game.loadQuestions(5);
         game.startGame();
     }
-    catch (const exception &e)
+    catch (const std::exception &e)
     {
-        cerr << "Error: " << e.what() << endl;
+        std::cerr << "Error: " << e.what() << std::endl;
         return 1;
     }
 
