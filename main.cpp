@@ -1,14 +1,15 @@
-#include <iostream>
-#include <vector>
-#include <string>
-#include <fstream>
-#include <sstream>
-#include <algorithm>
-#include <random>
-#include <unordered_set>
-#include <chrono>
-#include <thread>
-#include <future>
+#include <iostream>          // Used for input and output operations (e.g., cin, cout).
+#include <vector>            // Used for the vector container, which holds a collection of questions.
+#include <string>            // Used for the string class to handle text data.
+#include <fstream>           // Used for file input and output operations (e.g., ifstream, ofstream).
+#include <sstream>           // Used for string stream operations, useful for parsing strings.
+#include <algorithm>         // Used for algorithms like sort, find, etc.
+#include <random>            // Used for random number generation.
+#include <unordered_set>     // Used for the unordered_set container, which holds a collection of unique elements.
+#include <chrono>            // Used for time-related operations, like measuring time intervals.
+#include <thread>            // Used for creating and managing threads, such as implementing a delay.
+#include <future>            // Used for asynchronous operations and futures, for managing asynchronous tasks.
+
 
 class Question
 {
