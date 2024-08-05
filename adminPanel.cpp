@@ -2,6 +2,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <conio.h> // For _getch()
 
 class Question
 {
@@ -65,7 +66,7 @@ private:
     void updatePassword()
     {
         std::cout << "Enter new password: ";
-        std::cin >> password;
+        password = getMaskedInput();
         std::ofstream passwordFile("password.txt");
         if (!passwordFile)
         {
@@ -108,6 +109,30 @@ private:
             questions.push_back(q);
         }
         inFile.close();
+    }
+
+    std::string getMaskedInput() const
+    {
+        std::string input;
+        char ch;
+        while ((ch = _getch()) != 13) // Enter key is pressed
+        {
+            if (ch == 8) // Backspace is pressed
+            {
+                if (!input.empty())
+                {
+                    std::cout << "\b \b";
+                    input.pop_back();
+                }
+            }
+            else
+            {
+                std::cout << '*';
+                input.push_back(ch);
+            }
+        }
+        std::cout << std::endl;
+        return input;
     }
 
 public:
@@ -169,7 +194,7 @@ public:
     {
         std::string inputPassword;
         std::cout << "Enter password to access admin panel: ";
-        std::cin >> inputPassword;
+        inputPassword = getMaskedInput();
 
         if (!checkPassword(inputPassword))
         {
@@ -216,3 +241,4 @@ int main()
     quizManager.adminPanel();
     return 0;
 }
+ 
