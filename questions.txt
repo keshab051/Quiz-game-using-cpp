@@ -677,3 +677,24 @@ What comes next in the series: 2, 5, 10, 17, 26...?
 37
 4
 
+ Find the answer that best completes the analogy:Book is to Reading as Fork is to ?
+Drawing
+Writing
+Stirring
+Eating
+4
+
+What number best completes the analogy:8:4 as 10:
+3
+7
+24
+5
+4
+
+What number is missing from this sequence:4, 9, 16, 25, 36, ?, 64
+49
+50
+44
+89
+1
+
