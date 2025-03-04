@@ -14,7 +14,7 @@ public:
     void inputQuestion()
     {
         std::cin.ignore(); // Ignore any leftover newline characters in the input buffer
-        std::cout << "Enter the question: ";
+        std::cout << "Enter the question:";
         std::getline(std::cin, questionText);
 
         for (int i = 0; i < 4; ++i)
@@ -41,7 +41,7 @@ public:
 
     void loadQuestion(std::ifstream &inFile)
     {
-        std::getline(inFile, questionText);
+        std::getline(inFile, questionText);//read 
         for (auto &option : options)
         {
             std::getline(inFile, option);
