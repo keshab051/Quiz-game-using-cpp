@@ -3,13 +3,13 @@
 #include <string>            // Used for the string class to handle text data.
 #include <fstream>           // Used for file input and output operations (e.g., ifstream, ofstream).
 #include <sstream>           // Used for string stream operations, useful for parsing strings.
-#include <algorithm>         // Used for algorithms like sort, find, etc.
+#include <algorithm>         // Used for algorithms like Sorting the Randomly Selected Question Indices,sorting the Leaderboard.
 #include <random>            // Used for random number generation.
-#include <unordered_set>     // Used for the unordered_set container, which holds a collection of unique elements.
-#include <chrono>            // Used for time-related operations, like measuring time intervals.
-#include <thread>            // Used for creating and managing threads, such as implementing a delay.
-#include <future>            // Used for asynchronous operations and futures, for managing asynchronous tasks.
-
+#include <unordered_set>     // Used for the unordered_set container, which holds a collection of unique elements. here,std::unordered_set is                           used in the generateRandomNumbers method to ensure that the random numbers generated are unique.
+#include <chrono>            // used in conjunction with std::future to implement a timeout mechanism for answering questions
+#include <thread>            // <thread> is used indirectly through std::async for asynchronous operations, which in turn relies on threads.
+#include <future>            //  provides essential functionality for managing asynchronous operations and handling timeouts in the code,                          particularly in scenarios where blocking operations need to be performed without freezing the main thread.
+#include <cstdlib>             // Required for the system function
 
 class Question
 {
@@ -121,6 +121,10 @@ public:
 
     void startGame()
     {
+        std::cout<<"\n\n\n\t\t\t\t\t\t\t\tWelcome to QUIZ ARENA"<<std::endl;
+        std::cout<<"\n\t\t\t\t\t\t\t\t-->Developed by Team Brainy Bunch"<<std::endl<<"\n\t\t\t\t\t\t\t\t\t-Apekshya Koirala"<<std::endl<<"\n\t\t\t\t\t\t\t\t\t-Anuja Katuwal"<<std::endl<<"\n\t\t\t\t\t\t\t\t\t-Keshab Neupane"<<std::endl<<"\n\t\t\t\t\t\t\t\t\t-Arun Aryal";
+        getchar();
+        system("cls");
         std::cout << "Enter your full name: ";
         std::string playerName;
         std::getline(std::cin, playerName);
